@@ -1,0 +1,36 @@
+* {
+  font-family: "Rubik";
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 750px) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 970px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 1170px) / 2);
+  }
+}

@@ -1,0 +1,374 @@
+* {
+  font-family: "Rubik";
+}
+
+* {
+  font-family: "Rubik";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+:root {
+  --min-border-rad: 35px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 750px) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 970px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .landing .overlay .content {
+    margin-left: calc((100vw - 1170px) / 2);
+  }
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 80%;
+  background-color: red;
+  z-index: -1;
+  top: 0;
+  left: -10%;
+  border-bottom-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  background-image: linear-gradient(
+    50deg,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 80%;
+  background-color: red;
+  z-index: -1;
+  bottom: 0;
+  right: -10%;
+  border-top-left-radius: 60%;
+  border-top-right-radius: 60%;
+  background-color: hsl(270, 20%, 96%);
+}
+@media (max-width: 767px) {
+  body::before {
+    width: 100%;
+    left: -50%;
+    height: 600px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  body::after {
+    width: 100%;
+    right: -50%;
+    height: 600px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+}
+.container > .mobile {
+  width: 280px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: var(--min-border-rad);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  overflow: hidden;
+  padding: 10px;
+  position: relative;
+}
+.container > .mobile::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 20px;
+  background-color: red;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+}
+
+.container > .mobile > .user {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 23px 23px 5px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  padding: 30px 15px 15px;
+  position: relative;
+}
+.container > .mobile > .user::before {
+  content: "\f104";
+  font-family: "fontawesome";
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  left: 10px;
+  top: calc(50% + 8px);
+  transform: translateY(-50%);
+}
+.container > .mobile > .user::after {
+  content: "\f142";
+  font-family: "fontawesome";
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  right: 20px;
+  top: calc(50% + 8px);
+  transform: translateY(-50%);
+}
+.container > .mobile > .user > .img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+.container > .mobile > .user > .img > img {
+  max-width: 100%;
+}
+.container > .mobile > .user > .name > h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.container > .mobile > .user > .name > p {
+  margin: 0;
+  padding: 0;
+  color: hsl(270, 7%, 64%);
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 3px;
+}
+.container > .mobile > .cont {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(270, 20%, 96%);
+  border-bottom-left-radius: var(--min-border-rad);
+  border-bottom-right-radius: var(--min-border-rad);
+  padding: 10px;
+  overflow: hidden;
+}
+.container > .mobile > .cont > .top_shat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 5px;
+}
+.container > .mobile > .cont > .top_shat > .shat {
+  width: 170px;
+  background-color: hsl(206, 6%, 79%);
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 400;
+  color: hsl(276, 55%, 52%);
+}
+.container > .mobile > .cont > .shat_middele {
+  margin-top: 15px;
+}
+.container > .mobile > .cont > .shat_middele > .img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+.container > .mobile > .cont > .shat_middele > .img > img {
+  width: 40px;
+  border-radius: 10px;
+}
+.container > .mobile > .cont > .shat_middele > .shats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.container > .mobile > .cont > .shat_middele > .shats > .shat {
+  width: fit-content;
+  background-color: white;
+  border-radius: 15px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: right;
+  color: hsl(271, 36%, 24%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.container > .mobile > .cont > .shat_middele > .shats > .shat:first-child {
+  width: 145px;
+  text-align: left;
+}
+.container > .mobile > .cont > .bottom_shat {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+.container > .mobile > .cont > .bottom_shat > .shat_1 {
+  width: 170px;
+  background-color: hsl(206, 6%, 79%);
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 400;
+  color: hsl(276, 55%, 52%);
+}
+.container > .mobile > .cont > .bottom_shat > .shat_2,
+.container > .mobile > .cont > .bottom_shat > .shat_3 {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  width: 200px;
+  border-radius: 15px;
+  border-bottom-left-radius: 5px;
+  padding: 12px 30px;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 10px;
+  position: relative;
+  color: white;
+}
+.container > .mobile > .cont > .bottom_shat > .shat_2::before,
+.container > .mobile > .cont > .bottom_shat > .shat_3::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.container > .mobile > .cont > .bottom_shat > .shat_2::after,
+.container > .mobile > .cont > .bottom_shat > .shat_3::after {
+  content: "$29";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 19px;
+  font-weight: 700;
+  color: white;
+}
+.container > .mobile > .cont > .foot {
+  margin-top: 15px;
+  width: 100%;
+  position: relative;
+}
+.container > .mobile > .cont > .foot > form > input[type="text"] {
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 13px 18px;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  font-size: 12px;
+  color: hsl(276, 55%, 52%);
+}
+input:focus {
+  outline-width: 1px;
+  outline-color: hsl(289, 100%, 72%);
+}
+.container > .mobile > .cont > .foot > form > input[type="submit"] {
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+}
+.container > .mobile > .cont > .foot > form > label {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(271, 36%, 24%);
+  position: absolute;
+  border-radius: 50%;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+.container > .text {
+  max-width: 400px;
+}
+.container > .text > h1 {
+  line-height: 1.7;
+  color: hsl(264, 100%, 61%);
+}
+.container > .text > p {
+  line-height: 1.7;
+  color: hsl(206, 6%, 79%);
+}
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .container > .text > p {
+    text-align: center;
+  }
+  .container > .text > h1 {
+    text-align: center;
+  }
+  .container > .mobile {
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+  .container > .text {
+    margin-bottom: 60px;
+  }
+}
